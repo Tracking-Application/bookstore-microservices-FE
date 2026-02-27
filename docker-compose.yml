@@ -6,9 +6,6 @@ services:
     container_name: tracking_admin_fe
     ports:
       - "5173:5173"
-    volumes:
-      - ./tracking_admin:/app
-      - /app/node_modules
     command: npm run dev -- --host 0.0.0.0 --port 5173
 
   tracking_customer:
@@ -18,7 +15,4 @@ services:
     container_name: tracking_customer_fe
     ports:
       - "5174:5174"
-    volumes:
-      - ./tracking_customer:/app
-      - /app/node_modules
     command: npm run dev -- --host 0.0.0.0 --port 5174
